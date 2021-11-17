@@ -24,9 +24,10 @@ async function run() {
     const usersCollection = database.collection("users");
     const servicesCollection = database.collection("services");
 
-    //get api
+    // order get api
 
     app.get("/orders", async (req, res) => {
+      //user emailwise order hobe
       const email = req.query.email;
       const query = { email: email };
 
